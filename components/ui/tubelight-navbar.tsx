@@ -18,17 +18,6 @@ interface NavBarProps {
 
 export function NavBar({ items, className }: NavBarProps) {
   const [activeTab, setActiveTab] = useState(items[0].name)
-  const [isMobile, setIsMobile] = useState(false)
-
-  useEffect(() => {
-    const handleResize = () => {
-      setIsMobile(window.innerWidth < 768)
-    }
-
-    handleResize()
-    window.addEventListener("resize", handleResize)
-    return () => window.removeEventListener("resize", handleResize)
-  }, [])
 
   // Scroll-based active section detection
   useEffect(() => {
@@ -59,14 +48,14 @@ export function NavBar({ items, className }: NavBarProps) {
   const handleNavClick = (item: NavItem) => {
     const sectionId = item.url.replace('#', '')
     const element = document.getElementById(sectionId)
-    
+
     if (element) {
-      element.scrollIntoView({ 
+      element.scrollIntoView({
         behavior: 'smooth',
         block: 'start'
       })
     }
-    
+
     setActiveTab(item.name)
   }
 

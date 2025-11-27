@@ -1,6 +1,6 @@
 'use client'
 
-import { Suspense, lazy, useState, useEffect } from 'react'
+import { Suspense, lazy, useState } from 'react'
 const Spline = lazy(() => import('@splinetool/react-spline'))
 
 interface SplineSceneProps {
@@ -42,7 +42,7 @@ function SplineWrapper({ scene, className }: SplineSceneProps) {
 
 export function SplineScene({ scene, className }: SplineSceneProps) {
   return (
-    <Suspense 
+    <Suspense
       fallback={
         <div className="w-full h-full flex items-center justify-center bg-gradient-to-br from-gray-900 to-black rounded-lg">
           <div className="text-center text-white/70">

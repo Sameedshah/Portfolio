@@ -94,7 +94,7 @@ export function Footer() {
                                 }}
                                 className="mt-4 bg-white/10 hover:bg-white/20 border border-white/20 text-white backdrop-blur-sm transition-all duration-300"
                             >
-                                Let's Collaborate
+                                Let&apos;s Collaborate
                             </Button>
                         </div>
                     </div>

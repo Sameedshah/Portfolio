@@ -1,6 +1,5 @@
 "use client";
 import {
-  useMotionValueEvent,
   useScroll,
   useTransform,
   motion,
@@ -32,7 +31,7 @@ export const Timeline = ({
 
       // Add ResizeObserver to update height if content changes
       const resizeObserver = new ResizeObserver((entries) => {
-        for (let entry of entries) {
+        for (const entry of entries) {
           setHeight(entry.contentRect.height);
         }
       });

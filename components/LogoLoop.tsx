@@ -1,6 +1,6 @@
 'use client'
 
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useRef, useState } from 'react';
 
 interface Logo {
   node: React.ReactNode;
@@ -129,3 +129,5 @@ export function LogoLoop({
     </div>
   );
 }
+
+export default LogoLoop;
